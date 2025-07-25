@@ -284,6 +284,11 @@ body {
   .lover-span {
     display: inline;
   }
+
+    .add-to-cart {
+    white-space: nowrap; 
+    font-size: 0.95rem; 
+  }
 }
 
 
