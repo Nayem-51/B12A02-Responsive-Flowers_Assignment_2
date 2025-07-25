@@ -154,7 +154,7 @@ body {
 
 
 
-  /* Banner: stack image first, then text */
+  /* Banner */
   .banner-container {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -213,7 +213,7 @@ body {
 
 .plants-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 per row */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -260,10 +260,120 @@ body {
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .plants-grid {
-    grid-template-columns: repeat(2, 1fr); /* Mobile: 2 per row */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .plant-card img {
     height: 150px;
   }
+}
+
+.plants-lover {
+    padding: 100px 0;
+}
+
+.plants-lover .section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.lover-image {
+    position: relative;
+}
+
+.lover-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.trusted-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 286px;
+    height: 286px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate(25%, -50%);
+    
+}
+
+.trusted-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.lover-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #2D5016;
+}
+
+.lover-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lover-content li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    color: #4A6741;
+    line-height: 1.6;
+}
+
+.lover-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #8FBC8F;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .plants-lover .section-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .lover-image {
+        order: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .lover-image img {
+        height: 300px;
+    }
+
+    .lover-content {
+        order: 2;
+    }
+
+    .trusted-badge {
+        display: none;
+    }
+
+    .lover-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .lover-content li {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
 }
